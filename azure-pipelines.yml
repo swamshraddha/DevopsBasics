@@ -18,8 +18,10 @@ steps:
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
+    goals: 'package'
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+
 
 
 - task: CopyFiles@2
