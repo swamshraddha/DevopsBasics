@@ -13,17 +13,13 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
+    mavenOptions: '-xmx3072m'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
+    jdkArchitectureOption: 'x64'
     goals: 'package'
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
-
-
 
 - task: CopyFiles@2
   inputs:
